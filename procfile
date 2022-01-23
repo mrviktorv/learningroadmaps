@@ -1,1 +1,1 @@
-web: unicorn learningmaps.wsgi
+web: gunicorn learningmaps.wsgi
