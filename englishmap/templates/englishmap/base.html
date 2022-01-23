@@ -1,0 +1,146 @@
+
+
+
+{% load static %}
+<html lang="en">
+<head>
+<title>English roadmap</title>
+
+<!-- <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico"/> -->
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'englishmap/icon.ico' %}"/>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="{% static 'englishmap/main.css' %}">
+<!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+
+{% if title %}
+        <title>Learning Roadmaps - {{title}}</title>
+    {%else%}
+        <title>Learning Roadmaps</title>
+    {%endif%}
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-687LR5TBV4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-687LR5TBV4');
+</script> -->
+
+<style>
+
+
+</style>
+
+
+</head>
+
+
+<body>
+<header class="">
+
+
+
+
+</header>
+
+<main role="main" class="container"></main>
+
+<!-- make the navbar pale-red -->
+<div id="navbar" class="sticky">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">English Roadmap</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Grammar Map
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'home' %}#level-1">Level 1</a></li>
+              <li><a class="dropdown-item" href="{% url 'home' %}#level-2">Level 2</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'home' %}#etc">Advanced stuff</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'sample' %}">Sample grammar topic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'for-teachers' %}">For ESL teachers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'support' %}">Support this project (for free)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'help' %}">Help</a>
+          </li>
+          
+      </div>
+    </div>
+  </nav>
+</div>
+
+{% block content %}{% endblock %}
+
+</main>
+
+
+
+<footer class="bg-light text-center text-lg-start" style="background-color: rgba(66, 50, 50, 0.315) !important">
+    <div class="text-center p-3" >
+      <br>
+      © 2022 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">Learningmaps.com</a>
+      <br>
+      <br>
+    </div>
+</footer>
+
+<script>
+
+  
+  
+  
+
+  // data (can be later reworked into a front endpoint/fetc):
+  
+
+
+  </script>
+  
+<!-- <script type="text/javascript" src="layout.js"></script> -->
+<script type="text/javascript" src="{% static 'englishmap/layout.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- <script type="text/javascript" src="script.js"></script> -->
+<script type="text/javascript" src="{% static 'englishmap/script.js' %}"></script>
+</body>
+
+</html>
+
+
+
+

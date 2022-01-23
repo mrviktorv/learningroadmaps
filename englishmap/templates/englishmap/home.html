@@ -1,0 +1,136 @@
+{% extends "englishmap/base.html" %}
+{% block content %}
+{% load static %}
+
+
+
+<!-- page content -->
+<div class="content">
+
+
+    <div class="" >
+      <div class="container-image">
+        <figure>
+          <!-- <img src="images/gh.jpg"  alt="Snow" id="top-image" > -->
+          <img src="{% static 'englishmap/gh.jpg' %}"  alt="Snow" id="top-image" >
+          
+        </figure>
+          <div class="centered">
+              <h1>The English language roadmap</h1>
+              <br>
+              <h5>Will guide you from A to Z</h5>
+              <br>
+              <a href="#mission">
+              <button type="button" class="btn btn-lg btn-danger">Let's start!</button>
+              </a>
+          </div>
+      </div>
+      
+    
+    
+        <div id="grad1">
+          <div class="text-center" id="mission">
+            <br>
+            <br>
+            <h2>Mission:</h2>
+            <p>
+                We hope that this roadmap will help learners and teachers to structurize their exercises. 
+                This roadmap is designed to be good for self-education, you can follow it at your own pace. 
+                We believe that comprehensive education should be maximally affordable and available to everyone,
+                and this is our super-duper contribution!
+            </p>
+            <h2>Disclaimer:</h2>
+            <p>All levels and sets of topics per level are approximate and subjective. You don’t have to follow recommended directions, but the map will help you to navigate across the world of English grammar.
+              I’ll update and expand this work little by little, so stay tuned :)
+            </p>
+            <h2>How to use:</h2>
+            <p>
+                Follow the arrows on the map, explore topic cards. Click them to see more information.
+                Click "Learn more" inside the cards to find detailed explanations, pictures, and tests.
+                You can use this roadmap for studying or just revising what you have already learned. 
+                You may skip some topics if you want, but it will be easier for you to study them in the suggested order.
+                <br>
+                Need help? Go to <a href="{% url 'help' %}">this page</a>
+            </p>
+            <br>
+          </div>
+        </div>
+    
+    
+    </div>
+    
+    <!-- import grammar level templates -->
+    <div id="levels">
+    
+    
+      
+    
+    <!-- this padding 20 should go to classes -->
+      <div id="level-1">
+        <h2 style="margin-left:20px">Level 1</h2>
+        <button type="button" class="btn btn-sm btn-danger" style="margin-left:20px" id="btn1" onclick="collapse(1)">Hide</button>
+        <div id="collapse1">
+          <h3 style="margin-left:20px">Pre-elementary</h3>
+    
+    
+          <div id="layout"></div>
+    
+     
+    
+         
+    
+    
+    
+        </div>
+    
+      </div>
+    
+    
+      <div id="level-2">
+        <h2 style="margin-left:20px">Level 2</h2>
+        <button type="button" class="btn btn-sm btn-danger" style="margin-left:20px" id="btn2" onclick="collapse(2)">Hide</button>
+        <div id="collapse2">
+          <h3 style="margin-left:20px">Elementary</h3>
+    
+          <div id="layout2"></div>
+    
+        </div>
+    
+      </div>
+    
+    
+      <div id="etc">
+        <h1>Level 3 ()</h1>
+        <h1>Level 4 ()</h1>
+        <h1>Level 5 ()</h1>
+        <h1>Level 6 ()</h1>
+        <h1>Level 7 ()</h1>
+    
+    
+      </div>
+        
+    </div>
+    
+    
+      
+     
+    
+     
+     <!-- one modal -->
+     <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h4 id="c"></h4>
+        <span class="span-id" id="f"></span>
+        <hr>
+        <p id="d">
+        </p>
+        <p id="e">
+        </p>
+        <button class="learn-more-btn"><a href="{% url 'sample' %}">Learn more and test yourself!</a></button>
+        
+      </div>
+    </div>
+    
+    </div>
+
+{% endblock content %}
