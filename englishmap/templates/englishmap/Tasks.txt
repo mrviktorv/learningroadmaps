@@ -1,6 +1,9 @@
 Home:
 - погираться со вставкой template в django (цикл)
 
+push modif
+annotation/plans for nearest future
+
 settings => static root
 requirements (pip freeze)
 gitignore
@@ -11,6 +14,7 @@ install and import/set django-heroku
 
 heroku run manage.py migrate
 heroku run bash => python manage.py createsuperuser
+ViktorV superadmin12345
 
 later: [set secret key] and debug value in heroku
 ? install postgres
@@ -34,6 +38,8 @@ Then:
 
 
 Later:
+- Footer always at the bottom
+- Dynamic title
 - Think about different perspectives: cordova app, server, routing, vue, how much python and js and vue do i want?
 - think how to rework the js layout+data script into python 
 

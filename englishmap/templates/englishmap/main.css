@@ -68,6 +68,12 @@
     z-index: 8;
   }
 
+  #footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+  }
+
   .span-id {
     color: rgb(214, 200, 200);
   }

@@ -56,7 +56,7 @@ const topics = [
     },
     {
     id: 9,
-    topic: 'to be (present)', 
+    topic: 'To be (present)', 
     short: 'Am, is, are => I am, you are, he is, etc.', 
     full: `We are not, We aren’t, We're not
     You are not, You aren’t, You're not
