@@ -1,0 +1,32 @@
+{% extends "englishmap/base.html" %}
+{% block content %}
+{% load static %}
+
+<br>
+<br>
+<div>
+
+<h2>Current topic:</h2>
+
+
+<h3>
+    {{ topic.title }}
+</h3>    
+    {{ topic.id }}
+    <h4>In short:</h4>
+    {{ topic.short|safe }}
+    <h4>Explanation:</h4>
+    {{ topic.fullest|safe }}
+
+    <h5>Test yourself!</h5>
+    {{ topic.test|safe }}
+    <h5>Learn even more:</h5>
+    {{ topic.add|safe }}
+    
+
+
+
+</div>
+
+
+{% endblock content %}

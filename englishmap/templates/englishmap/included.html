@@ -1,0 +1,97 @@
+{% load static %}
+<div class="grid-container">
+    <div class="item1">
+      <div class="random">
+        <div class="arrow left">
+
+          {% if row.arrL  %}
+            {% with 'englishmap/'|add:row.arrL|add:'.png' as image_static %}
+            <img src="{% static image_static %}" class="img-arrow">
+            {% endwith %}
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+    <div class="item2">
+      <div class="random">
+        <div class="arrow center">
+           
+          {% if row.arrC  %}
+            {% with 'englishmap/'|add:row.arrC|add:'.png' as image_static %}
+            <img src="{% static image_static %}" class="img-arrow">
+            {% endwith %}
+          {% endif %}
+       
+        </div>
+      </div>
+    </div>
+    <div class="item3">
+      <div class="random">
+        <div class="arrow right">
+
+          {% if row.arrR  %}
+            {% with 'englishmap/'|add:row.arrR|add:'.png' as image_static %}
+            <img src="{% static image_static %}" class="img-arrow">
+            {% endwith %}
+          {% endif %}
+
+        </div>
+      </div>
+    </div>  
+    <div class="item4">
+      <div class="random left">
+
+        {% if row.topL > 0 %}
+          {% for curr_topic in topics %}
+            {% if curr_topic.id == row.topL %}
+
+            <div class="topic-card"  onclick="openmodalnew({% autoescape on %}{{ row.topL }}{% endautoescape %})">
+              <h4>{{ curr_topic.title }} <span class="span-id">{{ row.topL }}<span></h4>
+              <hr>
+              <p>{{ curr_topic.short|safe }}</p>
+            </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+      </div>
+    </div>
+    <div class="item5">
+      <div class="random center">
+     
+        {% if row.topC > 0 %}
+          {% for curr_topic in topics %}
+            {% if curr_topic.id == row.topC %}
+
+            <div class="topic-card"  onclick="openmodalnew({% autoescape on %}{{ row.topC }}{% endautoescape %})">
+              <h4>{{ curr_topic.title }} <span class="span-id">{{ row.topC }}<span></h4>
+              <hr>
+              <p>{{ curr_topic.short|safe }}</p>
+            </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+                  
+
+      </div>
+    </div>
+      <div class="item6">
+        <div class="random right">
+
+          {% if row.topR > 0 %}
+          {% for curr_topic in topics %}
+            {% if curr_topic.id == row.topR %}
+
+            <div class="topic-card"  onclick="openmodalnew({% autoescape on %}{{ row.topR }}{% endautoescape %})">
+              <h4>{{ curr_topic.title }} <span class="span-id">{{ row.topR }}<span></h4>
+              <hr>
+              <p>{{ curr_topic.short|safe }}</p>
+            </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        </div>
+      </div>
+</div>

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -132,11 +133,11 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
 
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         'skin': 'moonocolor',
-#         'toolbar': 'full',
-#         'width': 'auto',
-#         'toolbarCanCollapse': True,
-#     },
-# }
+CKEDITOR_CONFIGS = {
+    'default': {
+        'skin': 'moonocolor',
+        'toolbar': 'full',
+        'width': 'auto',
+        'toolbarCanCollapse': True,
+    },
+}

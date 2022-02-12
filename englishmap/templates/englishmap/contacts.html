@@ -3,7 +3,8 @@
     {% block content %}
     {% load static %}
 
-    <div style="height: 90%">
+    <div id="grad1" style="padding: 20px; height: 90%">
+
         <br><br><br>
 <h2>Contact the developer:</h2>
 
@@ -11,7 +12,11 @@
         To contact me, please
         <a href=https://mail.google.com/mail/?view=cm&fs=1&to=mr.verkhovsky@gmail.com&su=SUBJECT&body=BODY>send me an email</a>
    </p>
-
+   
+    OR 
+    <p></p>
+    Leave a comment <a href="{% url 'feedback' %}">Here</a>
+    </p>
     </div>
 
    {% endblock content %}

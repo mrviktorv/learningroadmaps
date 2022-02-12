@@ -1,0 +1,146 @@
+{% extends "englishmap/base.html" %}
+{% block content %}
+{% load static %}
+
+<br><br>
+
+<div id="grad1" style="padding: 20px">
+
+<h1>Your feedback</h1>
+<p>This is an experimental feature, here you can give your feedback on
+     your user experience with this website, share ideas? or ask questions.
+</p>
+
+<h4>Let us know what you think!</h4>
+<hr>
+<div>
+
+    <form name="form" method='POST' action="."> 
+    {% csrf_token %}
+      
+    <input type="hidden" name="form_type" value="formOne">
+    
+    <div class="form-group">
+        <h5>Your Name:</h5>
+        {{ form.name }}
+        <!-- {{ formR.nameR } -->
+    </div>
+    <div class="form-group">
+        <h5>Comment:</h5>
+        {{ form.body }}
+
+    </div>
+
+    <input type="submit" value="Comment!" />
+
+    </form>
+
+</div>
+
+
+
+
+{% for comment in page_obj %}
+<hr>
+<h4 style="color: purple">
+    {{ comment.name }} 
+</h4>
+<p>{{ comment.body }} </p> 
+<span style="color: grey">{{ comment.timestamp }}</span>
+
+
+            {% for reply in comment.get_replies|slice:":3" %}
+               <hr>
+                <div class="reply-body" style="padding-left: 30px">
+                    <h4 style="color: rgb(115, 72, 214)">{{ reply.nameR }} </h4> 
+                    
+                    <p>{{ reply.bodyR }}</p>
+                    <span style="color: grey">{{ reply.timestamp }}</span>
+                </div>
+              
+            {% endfor %}
+
+           
+            {% with forloop.counter|stringformat:"s" as collapse %}
+            {% if comment.get_replies|slice:"3:" %}
+            <br>
+            <button type="button" class="btn btn-sm btn-danger" style="margin-left:20px" 
+            id="{% autoescape on %}{{ 'more-btn'|add:collapse }}{% endautoescape %}" 
+            onclick="showMore({% autoescape on %}{{ forloop.counter }}{% endautoescape %})">Show more</button>
+            
+            <div style="display: none" id="{% autoescape on %}{{ 'showmore'|add:collapse }}{% endautoescape %}">
+                {% for reply in comment.get_replies|slice:"3:" %}
+                <hr>
+                <div class="reply-body" style="padding-left: 30px">
+                    <h4 style="color: rgb(115, 72, 214)">{{ reply.nameR }} </h4> 
+                    
+                    <p>{{ reply.bodyR }}</p>
+                    <span style="color: grey">{{ reply.timestamp }}</span>
+                </div>
+                
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div>
+<br>
+
+
+<form name="formR" style="padding-left: 30px" method='POST' action="."> 
+    {% csrf_token %}
+    <input type="hidden" name="form_type" value="formTwo">
+
+        <button type="button" class="btn btn-sm btn-primary" style="margin-left: -30px"
+        id="{% autoescape on %}{{ 'btn'|add:collapse }}{% endautoescape %}" 
+        onclick="replyCollapse({% autoescape on %}{{ forloop.counter }}{% endautoescape %})">Reply</button>
+        
+        
+        <div style="display: none" id="{% autoescape on %}{{ 'collapseForm'|add:collapse }}{% endautoescape %}">
+            
+            <p>Put the form in here later</p>
+            <div class="form-group">
+                <h5>Your Name:</h5>
+                {{ formR.nameR|default_if_none:comment.id }}
+               
+            </div>
+            <div class="form-group">
+                <h5>Reply:</h5>
+                {{ formR.bodyR }}
+               <input type='hidden' name='comment_id' value='{{ comment.id }}'>
+            
+            </div>
+            <input type="submit" value="Reply!" />
+        </div>
+        {% endwith %}
+</form>
+
+</div>
+
+
+{% endfor %}
+<hr>
+
+
+    <div >
+        {% if page_obj.has_previous %}
+            <a class="btn btn-outline-light mb-4" href="?page=1">First</a>
+            <a class="btn btn-outline-light mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+                <a class="btn btn-light mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3'%}
+                <a class="btn btn-outline-light mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <a class="btn btn-outline-light mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a class="btn btn-outline-light mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+        
+    </div>
+
+</div>
+
+{% endblock content %}
