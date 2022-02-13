@@ -34,9 +34,9 @@ ALLOWED_HOSTS = ['learning-roadmaps.herokuapp.com']
 
 INSTALLED_APPS = [
     'englishmap.apps.EnglishmapConfig',
+    'django.contrib.contenttypes',
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',

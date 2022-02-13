@@ -3,12 +3,12 @@
 {% load static %}
 
 
-<div>
+<div id="grad1" style="padding: 20px">
 <br>
 <br>
 <br>
 <h1>Glossary of terms and topics</h1>
-<a class="nav-link" href="{% url 'sample' %}">Sample grammar topic</a>
+
 <hr>
 
 <h4>Here you will find all the topics in the alphabetical order</h4>
@@ -37,12 +37,7 @@
 
 </div>
 
-{% for topic in topics %}
-<h3>
-    {{ topic.title }}
-    <h3><a class="article-title" href="{% url 'topic-detail' topic.id %}">{{ topic.title }}</a></h3>
-</h3>
-{% endfor %}
+
 
 
 {% endblock content %}
