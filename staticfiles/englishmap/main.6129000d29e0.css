@@ -18,7 +18,6 @@
   
   .text-center {
     text-align: center;
-    width: 100%;
   }
   
   #mission {
@@ -69,18 +68,8 @@
     z-index: 8;
   }
 
-  #footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-  }
-
   .span-id {
     color: rgb(214, 200, 200);
-  }
-
-  .learn-more-btn {
-    width: 100%
   }
   
   /* .sticky + .content {
@@ -119,7 +108,6 @@
   /* Modal Content */
   .modal-content {
       border-radius: 30px;
-  
       background-color: rgba(201, 66, 66, 0.993);
       color: white;
       margin: auto;
@@ -191,12 +179,37 @@
   .img-arrow {
     width: 20%;
   }
+
+  #c {
+    display: inline; 
+  }
+
+  .learn-more-btn {
+    background-color: #dfcdcd;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    outline: none;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+  }
+
+  .content-page {
+    background-color: aliceblue;
+  }
   
   @media screen and (max-width: 600px) {
     .topic-card > p {
       font-size: 10px;
     }
     .topic-card > h4 {
+      font-size: 15px;
+    }
+    #header {
+      font-size: 25px;
+    }
+    #slogan {
       font-size: 15px;
     }
   }

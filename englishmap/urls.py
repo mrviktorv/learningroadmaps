@@ -9,7 +9,7 @@ urlpatterns = [
     path('help/', views.help, name='help'),
     path('contacts/', views.contacts, name='contacts'),
     path('sample/', views.sample, name='sample'),
-    path('pytest/', views.pytest, name='pytest'),
+    # path('pytest/', views.pytest, name='pytest'),
     path('glossary/', views.glossary, name='glossary'),
     path('feedback/', views.feedback, name='feedback'),
     

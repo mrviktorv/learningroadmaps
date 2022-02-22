@@ -7,8 +7,8 @@ from django.core.paginator import Paginator
 from django.urls import reverse
 
 def home(request):
-    layout = LayoutRow.objects.all()
-    layout1 = LayoutRow1.objects.all()
+    layout = LayoutRow.objects.all().order_by('id')
+    layout1 = LayoutRow1.objects.all().order_by('id')
 
     context = {
         'topics': Topic.objects.all(),
@@ -97,17 +97,7 @@ alph = ["A", "B", "C", "D", "E", "F", "G", "H", "I",
 "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
 "U", "V", "W", "X", "Y", "Z"]
 
-def pytest(request):
-    layout = LayoutRow.objects.all()
-    layout1 = LayoutRow1.objects.all()
 
-    context = {
-        'topics': Topic.objects.all(),
-        'rows': layout,
-        'rows1': layout1
-    }
-    
-    return render(request, 'englishmap/pytest.html', context)
 
 
 def glossary(request):

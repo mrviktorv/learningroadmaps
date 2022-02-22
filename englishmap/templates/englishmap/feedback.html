@@ -1,10 +1,11 @@
 {% extends "englishmap/base.html" %}
 {% block content %}
 {% load static %}
+{% load widget_tweaks %}
 
-<br><br>
 
-<div id="grad1" style="padding: 20px">
+
+<div id="grad1" style="padding: 20px; margin-top: 50px">
 
 <h1>Your feedback</h1>
 <p>This is an experimental feature, here you can give your feedback on
@@ -23,11 +24,12 @@
     <div class="form-group">
         <h5>Your Name:</h5>
         {{ form.name }}
-        <!-- {{ formR.nameR } -->
+      
     </div>
-    <div class="form-group">
+    <div class="form-group" style="width: auto">
         <h5>Comment:</h5>
-        {{ form.body }}
+        
+        {% render_field form.body rows="7" cols="40" title="Hello, world!" %}
 
     </div>
 
@@ -96,7 +98,7 @@
         
         <div style="display: none" id="{% autoescape on %}{{ 'collapseForm'|add:collapse }}{% endautoescape %}">
             
-            <p>Put the form in here later</p>
+          
             <div class="form-group">
                 <h5>Your Name:</h5>
                 {{ formR.nameR|default_if_none:comment.id }}

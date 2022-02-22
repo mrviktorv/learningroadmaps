@@ -2,17 +2,15 @@
 {% block content %}
 {% load static %}
 
-<br>
-<br>
-<div>
 
-<h2>Current topic:</h2>
+<div id="grad1" style="padding: 20px; margin-top: 50px">
 
 
-<h3>
+<h2>
     {{ topic.title }}
-</h3>    
-    {{ topic.id }}
+</h2>    
+<span style="color: grey">Topic #{{ topic.id }}</span>
+    
     <h4>In short:</h4>
     {{ topic.short|safe }}
     <h4>Explanation:</h4>

@@ -194,12 +194,22 @@
     cursor: pointer;
     color: white;
   }
+
+  .content-page {
+    background-color: aliceblue;
+  }
   
   @media screen and (max-width: 600px) {
     .topic-card > p {
       font-size: 10px;
     }
     .topic-card > h4 {
+      font-size: 15px;
+    }
+    #header {
+      font-size: 25px;
+    }
+    #slogan {
       font-size: 15px;
     }
   }

@@ -16,9 +16,9 @@
           
         </figure>
           <div class="centered">
-              <h1>The English language roadmap</h1>
+              <h1 id="header">The English language roadmap</h1>
               <br>
-              <h5>Will guide you from A to Z</h5>
+              <h5 id="slogan">Will guide you from A to Z</h5>
               <br>
               <a href="#mission">
               <button type="button" class="btn btn-lg btn-danger">Let's start!</button>
@@ -67,7 +67,7 @@
     
     <!-- this padding 20 should go to classes -->
       <div id="level-1">
-        <h2 style="margin-left:20px">Level 1</h2>
+        <h2 style="margin-left:20px">Level 0</h2>
         <button type="button" class="btn btn-sm btn-danger" style="margin-left:20px" id="btn1" onclick="collapse(1)">Hide</button>
         <div id="collapse1">
           <h3 style="margin-left:20px">Pre-elementary</h3>
@@ -90,7 +90,7 @@
     
     
       <div id="level-2">
-        <h2 style="margin-left:20px">Level 2</h2>
+        <h2 style="margin-left:20px">Level 1</h2>
         <button type="button" class="btn btn-sm btn-danger" style="margin-left:20px" id="btn2" onclick="collapse(2)">Hide</button>
         <div id="collapse2">
           <h3 style="margin-left:20px">Elementary</h3>
@@ -109,11 +109,8 @@
     
     
       <div id="etc">
-        <h1>Level 3 ()</h1>
-        <h1>Level 4 ()</h1>
-        <h1>Level 5 ()</h1>
-        <h1>Level 6 ()</h1>
-        <h1>Level 7 ()</h1>
+        <h1>Levels 2-6 are coming soon! </h1>
+        
     
     
       </div>
@@ -121,37 +118,26 @@
     </div>
     
     
-      
-     
-    
-     
-    
-     <!-- <div id="myModal" class="modal">
-      <div class="modal-content">
-        <h4 id="c"></h4>
-        <span class="span-id" id="f"></span>
-        <hr>
-        <p id="d">
-        </p>
-        <p id="e">
-        </p>
-        <button class="learn-more-btn"><a href="{% url 'sample' %}">Learn more and test yourself!</a></button>
-        
-      </div>
-    </div> -->
+  
     
 <!-- modal window for testing -->
 
 <div id="myModal" class="modal">
   <div class="modal-content">
-    <span class="span-id" id="tid"></span><h4 id="tname"s></h4>
+    <h4 id="tname"></h4>
+    <span class="span-id" id="tid"></span>
     <hr>
     <p id="tshort">
     </p>
     <p id="tfull">
     </p>
     <div class="text-center" >
-    <a  class="learn-more-btn" id="link" href="">Learn more and test yourself!</a>
+<p>
+    
+  </p>
+  <button class="learn-more-btn" >
+    <a id="link" href="">Learn more and test yourself!</a>
+  </button>
     <!-- better do a button with hover light instead of a: button onclick=(func) -->
     </div>
   </div>
@@ -183,11 +169,7 @@
               },
           {% endfor %}
           ]
-      
-          console.log(alltopics[1].short)
-      
-      
-      
+       
       
       function openmodalnew(n) {
           var modal = document.getElementById("myModal");

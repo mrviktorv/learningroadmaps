@@ -97,7 +97,7 @@ const topics = [
     topic: 'Sentence parts and Sentence structure', 
     short: 'Subject, helping verb, verb, object', 
     full: `Subject => noun, Helping verb => to be: am/is/are/was/were/been,
-    do, did, + modal verbs`
+    do, did, have, has, had + modal verbs`
     },
     {
     id: 16,
