@@ -47,7 +47,7 @@
             {% if curr_topic.id == row.topL %}
 
             <div class="topic-card"  onclick="openmodalnew({% autoescape on %}{{ row.topL }}{% endautoescape %})">
-              <h4>{{ curr_topic.title }} <span class="span-id">{{ row.topL }}<span></h4>
+              <h4>{{ curr_topic.title }} <span class="span-id">#{{ row.topL }}<span></h4>
               <hr>
               <p>{{ curr_topic.short|safe }}</p>
             </div>
@@ -65,7 +65,7 @@
             {% if curr_topic.id == row.topC %}
 
             <div class="topic-card"  onclick="openmodalnew({% autoescape on %}{{ row.topC }}{% endautoescape %})">
-              <h4>{{ curr_topic.title }} <span class="span-id">{{ row.topC }}<span></h4>
+              <h4>{{ curr_topic.title }} <span class="span-id">#{{ row.topC }}<span></h4>
               <hr>
               <p>{{ curr_topic.short|safe }}</p>
             </div>
@@ -84,7 +84,7 @@
             {% if curr_topic.id == row.topR %}
 
             <div class="topic-card"  onclick="openmodalnew({% autoescape on %}{{ row.topR }}{% endautoescape %})">
-              <h4>{{ curr_topic.title }} <span class="span-id">{{ row.topR }}<span></h4>
+              <h4>{{ curr_topic.title }} <span class="span-id">#{{ row.topR }}<span></h4>
               <hr>
               <p>{{ curr_topic.short|safe }}</p>
             </div>

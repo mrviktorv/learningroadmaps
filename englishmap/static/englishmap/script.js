@@ -32,6 +32,13 @@
     }
   }
 
+
+
+  bodyh = document.getElementsByTagName("body")[0].scrollHeight
+  // console.log(bodyh)
+  document.getElementById("grad2").style.height = bodyh-150
+
+
   // a function to crop the top image div depending on the size of the window/screen (i may use it later)
   // function height() {
   //   console.log(window.innerHeight)
@@ -48,9 +55,4 @@
   // When the user clicks anywhere outside of the modal, close it
   // refactor this code like this: document.querySelectorAll(".card").forEach(card=>{card.style.display = ...
     
-
-
-
-  
-  // slightly randomize the card's position (put all paddings into 1 padding: x x x x)
 

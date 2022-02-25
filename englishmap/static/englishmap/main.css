@@ -1,3 +1,21 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 0 100px;
+}
+
+#footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
 .container-image {
     position: relative;
     text-align: center;
@@ -15,6 +33,10 @@
   #grad1 {
     background-image: linear-gradient( rgba(207, 106, 106, 0.267) ,rgba(53, 80, 155, 0.253));
   }
+
+  #grad2 {
+    background-image: linear-gradient( rgba(207, 106, 106, 0.267) ,rgba(53, 80, 155, 0.253));
+  }
   
   .text-center {
     text-align: center;
@@ -27,6 +49,8 @@
     padding: 1rem;
     color: rgb(92, 92, 92);
   }
+
+ 
 
   .other-pages {
     margin-left: 5%;
@@ -56,9 +80,9 @@
   color: rgb(255, 255, 255) !important;
   }
   
-  /* change these 3 and make the navbar  always sticky!!! */
+  
   .content {
-    padding-top: 55px;
+    padding-top: 30px;
   }
   
   .sticky {
@@ -72,9 +96,7 @@
     color: rgb(214, 200, 200);
   }
   
-  /* .sticky + .content {
-    padding-top: 60px;
-  } */
+
 
   
   .navbar-brand {
@@ -195,6 +217,7 @@
     color: white;
   }
 
+/*  dew it */
   .content-page {
     background-color: aliceblue;
   }

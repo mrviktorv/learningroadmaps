@@ -11,7 +11,7 @@
     <div class="" >
       <div class="container-image">
         <figure>
-          <!-- <img src="images/gh.jpg"  alt="Snow" id="top-image" > -->
+         
           <img src="{% static 'englishmap/gh.jpg' %}"  alt="Snow" id="top-image" >
           
         </figure>
@@ -59,11 +59,8 @@
     
     </div>
     
-    <!-- import grammar level templates -->
+ 
     <div id="levels">
-    
-    
-      
     
     <!-- this padding 20 should go to classes -->
       <div id="level-1">
@@ -72,9 +69,7 @@
         <div id="collapse1">
           <h3 style="margin-left:20px">Pre-elementary</h3>
     
-    
           <!-- <div id="layout"></div> -->
-    
      
           {% for row in rows %}
           {% include "englishmap/included.html" %}
@@ -111,8 +106,6 @@
       <div id="etc">
         <h1>Levels 2-6 are coming soon! </h1>
         
-    
-    
       </div>
         
     </div>
@@ -120,7 +113,7 @@
     
   
     
-<!-- modal window for testing -->
+<!-- modal window for topics -->
 
 <div id="myModal" class="modal">
   <div class="modal-content">
@@ -138,7 +131,7 @@
   <button class="learn-more-btn" >
     <a id="link" href="">Learn more and test yourself!</a>
   </button>
-    <!-- better do a button with hover light instead of a: button onclick=(func) -->
+    <!-- better do a button with hover light instead of anchor tag: button onclick=(func) -->
     </div>
   </div>
 </div>
@@ -179,7 +172,7 @@
       // document.getElementById("tname").style.float= "left";
       document.getElementById("tshort").innerHTML = obj.short;
       document.getElementById("tfull").innerHTML = obj.full;
-      document.getElementById("tid").innerHTML = n;
+      document.getElementById("tid").innerHTML = "".concat( 'Topic #', n)
       let link = "".concat("{% url 'home' %}", 'topic/', n)
       document.getElementById("link").href= link
       }

@@ -20,13 +20,13 @@
 <ul>
 {% for topic in topics %}
 
-<!-- % with post.name as postletter %} -->
+
 {% if topic.firstletter == letter %}
 <li>
     <a class="article-title" href="{% url 'topic-detail' topic.id %}">{{ topic.title }}</a>
 </li>
 {% endif %}
-<!-- { endwidth %} -->
+
 
 {% endfor %}
 </ul>
