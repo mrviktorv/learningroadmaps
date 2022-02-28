@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-t0h4khd+cv6@bx-%h3ri_b9)yi=u0hg6rasy6=0h(s(pmf+&y=
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['learning-roadmaps.herokuapp.com']
+ALLOWED_HOSTS = ['learning-roadmaps.herokuapp.com', 'viktorv.pythonanywhere.com']
 
 # Application definition
 
